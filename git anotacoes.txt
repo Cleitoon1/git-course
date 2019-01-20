@@ -84,3 +84,10 @@ git s
 adicionando tags
 git tag -a 1.0.0 -m "Readme finalizado"
 git push --tags
+
+apagando tags
+git tag -d 1.0.1
+git push origin :1.0.1
+
+revertendo commit
+git revert 54a3823e72f3db78f3fa01415c99e2a67105f06f
