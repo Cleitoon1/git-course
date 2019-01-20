@@ -76,3 +76,11 @@ git checkout -b 'testing'
 git branch - para ver em qual branch estou
 git chekcout testing - para ir para a branch
 git branch -D testing - deletar a branch
+
+adiconando alias pra comando
+git config --global alias.s status
+git s
+
+adicionando tags
+git tag -a 1.0.0 -m "Readme finalizado"
+git push --tags
