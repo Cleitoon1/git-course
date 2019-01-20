@@ -1,0 +1,78 @@
+Adicionar Configurações Iniciais
+
+Setar nome do usuário
+git config --global user.name "Cleiton Alves"
+
+Setar email
+git config --global user.email = "cleiton.alvesjc@gmail.com"
+
+Mostrar configurações
+git config user.email
+git config user.name
+
+Iniciando o repositório - entrar na pasta e utilizar o comando
+git init
+
+Status dos arquivos
+
+Untracked - Arquivo recem adicionado no git, arquvivo que o git "não conheceçe", ainda não foi incluida no checkin
+UnModified - Existe, mas ainda nunca foi modificado, após realizar o commit ele também volta para esse status
+Modified - Arquivo modificado
+Staged - arquivo marcado para ir para nova versão, antes da realização do commit, após ele sai desse status e vai para modified
+
+verificar status
+git status
+
+adicionar arquivo para o commit
+git add Readme.md, git add . para adicionar tudo 
+
+comitando arquivo, criaçao de uma imagem do repositório daquele momento de acordo com oq foi adicionado
+git commit -m "Add Readme.md"
+
+sequencia básica
+1.Adicionar arquivos
+2 (ou 0).Verificar status
+3. Realizar commit
+
+ver log
+git log
+git log --decorate
+git log --author="Cleiton Alves"
+git shortlog
+git shortlog -sn
+git log --graph
+git show c8aa8dc0f33d9f699c3d1e290a00f038b4e6bd69
+
+ver diferenças
+git diff
+git diff --name-only
+
+desfazer alterações quando ainda não foi adicionado ao checkin
+git checkout Readme.md
+
+desfazer alterações após adicionar ao checkin
+git reset HEAD Readme.md
+git checkout Readme.md
+
+desfazer alterações após realizar o commit
+git reset --soft "hash" = Mata o commit e volta as alterações para staged (para para ser comitada novamente)
+git reset --mixed "hash" = Mata o commit e volta as alterações para modified, quando os arquivos ja estavam alterados
+git reset --hard "hash" = Mata o commit de vez
+
+tutorial ssh
+https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+
+conectar a um repositorio existente do github - após realizar o processo da ssh
+git remote add origin https://github.com/Cleitoon1/git-course.git
+
+enviar os dados para o github
+git push -u origin master
+
+clonar repositorio exemplo - selecione a pasta
+g clone git@github.com:Cleitoon1/git-course.git
+
+criar um branch
+git checkout -b 'testing'
+git branch - para ver em qual branch estou
+git chekcout testing - para ir para a branch
+git branch -D testing - deletar a branch
