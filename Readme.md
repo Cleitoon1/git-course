@@ -1,3 +1,3 @@
 Git Course
 
-Este é um repositório teste para ensinar como o git funciona
+Este é um repositório de teste para aprender como o git funciona.
